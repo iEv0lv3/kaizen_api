@@ -21,15 +21,3 @@ class ApiEndpoint < Sinatra::Base
     response.body
   end
 end
-
-  # private
-
-  # def get_json(url)
-  #   response = conn.get(url)
-  #   JSON.parse(response.body, symbolize_names: true)
-  # end
-
-  # def conn
-  #   Faraday.new(url: 'https://api.stackexchange.com/')
-  #   end
-  # end
