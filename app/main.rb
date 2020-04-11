@@ -6,7 +6,7 @@ require_relative './services/github_service'
 
 class ApiEndpoint < Sinatra::Base
   get '/' do
-    erb :index
+    'Hello!'
   end
 
   get '/badges' do
