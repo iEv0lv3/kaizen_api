@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stackexchange.com/2.2/users/4947551/badges?order=desc&site=stackoverflow&sort=rank
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '333'
+      Content-Type:
+      - application/json; charset=utf-8
+      Strict-Transport-Security:
+      - max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Guid:
+      - 618b1808-16be-4bfb-80c1-ca82b922d280
+      Set-Cookie:
+      - prov=4f72e05a-53c9-4746-bd9e-7cfdabd11f1a; expires=Fri, 01 Jan 2055 00:00:00
+        GMT; domain=.stackexchange.com; path=/; secure; samesite=none; httponly
+      Date:
+      - Fri, 10 Apr 2020 22:23:12 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"items":[{"user":{"reputation":1,"user_id":4947551,"user_type":"registered","profile_image":"https://lh6.googleusercontent.com/-YrHOf63VSnQ/AAAAAAAAAAI/AAAAAAAACew/o7Z3gRlNFzk/photo.jpg?sz=128","display_name":"Jordan
+        Williams","link":"https://stackoverflow.com/users/4947551/jordan-williams"},"badge_type":"named","award_count":1,"rank":"bronze","badge_id":2600,"link":"https://stackoverflow.com/badges/2600/informed","name":"Informed"}],"has_more":false,"quota_max":300,"quota_remaining":277}'
+    http_version: null
+  recorded_at: Fri, 10 Apr 2020 22:23:12 GMT
+recorded_with: VCR 5.1.0
