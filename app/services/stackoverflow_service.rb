@@ -1,9 +1,14 @@
 class StackOverflowService
-  def initialize(user_id)
+  def initialize(user_id, so_token)
+    @so_token = so_token
     @user_id = user_id
   end
 
   def get_badges
-    Faraday.get("https://api.stackexchange.com/2.2/users/#{@user_id}/badges?order=desc&sort=rank&site=stackoverflow")
+    conn = Faraday.new("https://api.stackexchange.com/2.2/me/badges?order=desc&sort=rank&site=stackoverflow") do |f|
+      f.headers['Authorization'] = "token #{@so_token}"
+    end
+
+    conn.get
   end
 end
