@@ -10,7 +10,7 @@ class ApiEndpoint < Sinatra::Base
   end
 
   get '/so_badges' do
-    so_service = StackOverflowService.new(request.env['HTTP_UID'], request.env['HTTP_TOKEN'])
+    so_service = StackOverflowService.new(request.env['HTTP_UID'])
     response = so_service.get_badges
     response.body
   end
